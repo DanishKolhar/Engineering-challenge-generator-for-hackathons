@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hackathon Challenge Generator</title>
+  <style>
+    body {
+        
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(to bottom right,  rgba(0, 1, 3, 0.3)),
+        url('https://clearhorizd43a736224.blob.core.windows.net/blobclearhorizd43a736224/2024/02/AI-hackathon-banner.jpg')
+        no-repeat center center fixed;
+        background-size: cover;
+        margin: 0;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      /* Enhance container to stand out over bg */
+      .container {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        max-width: 650px;
+        width: 100%;
+      }
+      
+   
+    h1 {
+      color: #2c3e50;
+      margin-bottom: 1rem;
+    }
+
+    .container {
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      max-width: 600px;
+      width: 100%;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.8rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    button {
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 1rem;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .output {
+      margin-top: 2rem;
+      background-color: #f8f9fa;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      text-align: left;
+      display: none;
+    }
+
+    #mainInterface {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .fade-in {
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+body>
+
+  <div class="container fade-in" id="loginPage">
+    <h1>Welcome Engineer!</h1>
+    <p>Please enter your details to continue:</p>
+    <input type="text" id="nameInput" placeholder="Enter your name" required />
+    <input type="text" id="rollInput" placeholder="Enter your roll number" required />
+    <button onclick="startChallenge()">Start Generating</button>
+  </div>
+
+  <div class="container fade-in" id="mainInterface">
+    <h1 id="greeting"></h1>
+    <p>Click below to generate your challenge:</p>
+    <button id="generateBtn">Generate Challenge</button>
+    <div class="output" id="challengeBox">
+      <strong>Your challenge will appear here...</strong>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+  
